@@ -6,7 +6,7 @@ right now.
 
 This means we won't be showing any flags/options _yet_ (unless specified
 otherwise). This also means that we won't be pedantic with the terms used here
-(especially if we can use a term to make the learned understand the thing better
+(especially if we can use a term to make the learner understand the thing better
 even though that's not the correct term).
 
 # Concepts
