@@ -1,4 +1,4 @@
-# Nota Bine
+# Nota Bene
 
 In general, we're trying to give a quick overview of the basics of GNU Coreutils
 and Unix related stuffs. So we won't be going too deep into a specific command
