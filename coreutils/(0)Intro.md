@@ -68,11 +68,13 @@ Commands covered in here:
 
 ## echo
 
-`echo` is used to print things to the `stdout`.
+`echo` is used to print things. It prints them to the `stdout`.
 
 ```sh
 echo "Hello, world"
 ```
+
+You can also use single quotes to provide the string argument.
 
 ## pwd
 
