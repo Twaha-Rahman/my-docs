@@ -56,6 +56,7 @@ Some popular shells:
 Commands covered in here:
 
 - echo
+- whoami
 - pwd
 - cd
 - ls
@@ -76,6 +77,38 @@ echo "Hello, world"
 
 You can also use single quotes to provide the string argument.
 
+```sh
+echo 'meowy meow'
+```
+
+You'll need to escape any extra double/single quotes inside the string if there
+is any of it inside it.
+
+```sh
+echo "Hello \"Meowy\""
+```
+
+Or you can have double quotes inside a single quote delimited string.
+
+```sh
+echo 'Hello "Meowy"'
+```
+
+Or the other way around...
+
+```sh
+echo "Hello 'Meowy'"
+```
+
+## whoami
+
+`whoami` is used to print the name of the current user that's logged in. It
+prints it to the `stdout`.
+
+```sh
+whoami
+```
+
 ## pwd
 
 `pwd` is used to print out the path of the presently visited directory.
@@ -89,9 +122,23 @@ pwd
 `cd` is used to change the presently visited directory.
 
 ```sh
-cd ~
+cd fruits
 
 cd projects/cpp/electricityBillCalculator
+```
+
+To go to the parent folder/directory, you'll need to use the following command:
+
+```sh
+cd ..
+```
+
+Here, the `..` signifies the parent folder.
+
+To quickly get back to the home folder, go to `~`.
+
+```sh
+cd ~
 ```
 
 _N.B.:_ The tilde `~` used here expands to the current user's home directory.
@@ -105,6 +152,26 @@ directory. (In Unix derivatives, we usually call a _folder_ a _directory_)
 
 ```sh
 ls
+```
+
+You can even use it to look inside a folder even without going inside the
+folder.
+
+```sh
+ls fruits
+```
+
+The above command will list out the files and directories (folder) inside the
+`fruits` directory (folder).
+
+The same can be done for other directories (folders):
+
+```sh
+ls fruits/summer
+
+ls ~
+
+ls notes/1stYear/2ndSemester/EDC
 ```
 
 # touch
@@ -175,7 +242,7 @@ rm ./a.exe
 To delete folders (directories):
 
 ```sh
-rm -r ~/fruits
+rm -r fruits
 ```
 
 ## mv
@@ -206,8 +273,11 @@ mkdir ~/books
 To make nested directories, we need to use the `-p` flag:
 
 ```sh
-mkdir -p ~/books/1st_Year/2nd_Semester
+mkdir -p fruits/summer
 ```
+
+The above command will make a nested `summer` directory (folder) inside the
+`fruits` directory (folder).
 
 ## rmdir
 
@@ -218,3 +288,7 @@ rmdir fruits
 
 rmdir ~/certificates
 ```
+
+**N.B.:** The `rmdir` command can only delete empty directories (folders).
+Meaning, if there are files or other directories inside it, then it can't delete
+it.
