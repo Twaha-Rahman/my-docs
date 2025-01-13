@@ -1,4 +1,4 @@
-# Steps required to get a project running in ESP32C6
+# Steps required to set-up an ESP-IDF project for ESP32C6
 
 After the installation process, follow the following steps:
 
@@ -8,10 +8,18 @@ After the installation process, follow the following steps:
 get_idf
 ```
 
+(An alias for this command was added during the installation process)
+
 2. You can copy an example sample project provided by ESP IDF:
 
 ```sh
 cp -r $IDF_PATH/examples/<<PROJECT_NAME>>
+```
+
+Or you could create a new blank project with only the basics setup for you:
+
+```sh
+idf.py create-project <<PROJECT_NAME>>
 ```
 
 3. Run the following command before and after plugging in the ESP32C6 and look
@@ -35,7 +43,13 @@ sudo chmod a+rw /dev/tty<<ESP32C6_PORT_NAME>>
 idf.py set-target esp32c6
 ```
 
-6. Now, compile and flash the project:
+6. Now, compile and flash the project use the `flash` command:
+
+```sh
+idf.py flash
+```
+
+To explicitly specify the port (the one we found in step 3), use the `-p` flag:
 
 ```sh
 idf.py -p /dev/tty<<ESP32C6_PORT_NAME>> flash
@@ -44,7 +58,20 @@ idf.py -p /dev/tty<<ESP32C6_PORT_NAME>> flash
 The `flash` command will automatically compile and flash the project to the
 ESP32C6. No need to manually run the `build` command.
 
-7. Finally, monitor the port to see the ESP32C6's output:
+To only flash the _project app_, run the following command:
+
+```sh
+idf.py app-flash
+```
+
+7. Finally, monitor the port to see the ESP32C6's output using the `monitor`
+   command:
+
+   ```sh
+   idf.py monitor
+   ```
+
+To explicitly specify the port (the one we found in step 3), use the `-p` flag:
 
 ```sh
 idf.py -p /dev/tty<<ESP32C6_PORT_NAME>> monitor

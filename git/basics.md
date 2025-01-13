@@ -30,7 +30,8 @@ M  -> File that has been modified
 
 The patterns that can be used inside `.gitignore` file is:
 
-- Blank lines or lines starting with # are ignored
+- Blank lines are ignored
+- Lines starting with # are ignored. As such they are used for comments.
 - Standard glob patterns work, and will be applied recursively throughout the
   entire working tree
 - A pattern can be negated by starting it with an exclamation mark (!)
@@ -45,9 +46,10 @@ single character; and brackets enclosing characters separated by a hyphen ([0-
 use two asterisks to match nested directories; a/\*\*/z would match a/z, a/b/z,
 a/b/c/z, and so on.
 
-_GitHub maintains a fairly comprehensive list of good `.gitignore` file examples
-for dozens of projects and languages at https://github.com/github/gitignore if
-you want a starting point for your project._
+**GitHub maintains a fairly comprehensive list of good `.gitignore` file
+examples for dozens of projects and languages at
+https://github.com/github/gitignore if you want a starting point for your
+project.**
 
 # diff
 
