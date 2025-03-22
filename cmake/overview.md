@@ -23,7 +23,7 @@ The CMake building process has 3 stages:
 In this stage, CMake reads the project details stored in a directory, called the
 _source tree_, and it prepares the output directory called the _build tree_.
 
-CMake starts by creating an empty build tree and collecting all of the details
+CMake starts by creating an empty `build tree` and collecting all of the details
 about the environment it is running in. (For example: architecture, available
 compilers, linkers, archivers etc)
 
@@ -59,9 +59,9 @@ add_executable(Sample main.cpp)
 
 Then run the following commands (from the source tree):
 
-```shell
-cmake -S . -B build
-cmake --build build
+```sh
+cmake -S . -B build         # config and generation stage
+cmake --build build         # build stage
 ```
 
 # Mastering the CMake CLI
@@ -79,7 +79,7 @@ CMake provides the following actions:
 
 Run the following to generate a project buildsystem:
 
-```shell
+```sh
 cmake [<options>] -S <path-to-source> -B <path-to-build>
 ```
 
@@ -95,7 +95,7 @@ For that, you'll need to set the appropriate cache variables with the `-D` flag.
 
 For example:
 
-```shell
+```sh
 cmake -S . -B build -D <var>=<value>
 cmake -S . -B build -D <var>[:<type>]=<value>
 
@@ -104,10 +104,10 @@ cmake -S . -B build -D CMAKE_BUILD_TYPE=Debug
 ```
 
 We can list cache variables with the `-L` flag. To see the help messages with
-variable, add the `H` modifier. To see the advanced variables too, add the `A`
-modifier:
+the variable, add the `H` modifier. To see the advanced variables too, add the
+`A` modifier:
 
-```shell
+```sh
 cmake -L[A][H] <path-to-source>
 
 cmake -LA ./debug
@@ -121,7 +121,7 @@ cmake -LH ./release
 
 The removal of one or more variables can be done with the `-U` flag:
 
-```shell
+```sh
 cmake -U <globbing_expr> <path-to-source>
 
 cmake -U CMAKE_BUILD_TYPE ./debug
@@ -137,7 +137,7 @@ Please note that, both the `-U` and `-D` options can be repeated multiple times.
 To build a project that has its buildsystem already generated in a build tree
 directory, run:
 
-```shell
+```sh
 cmake --build <dir> [<options>] [-- <build-tool-options>]
 cmake --build <dir> -- <build-tool-options>
 cmake --build <dir>
@@ -148,7 +148,7 @@ cmake --build ./debug
 
 For parallel builds, run:
 
-```shell
+```sh
 cmake --build <dir> -j [<number-of-jobs>]
 
 cmake --build ./build -j 8
@@ -156,7 +156,7 @@ cmake --build ./build -j 8
 
 To clean the buildtree, run:
 
-```shell
+```sh
 cmake --build <dir> -t clean
 
 cmake --build ./debug -t clean
@@ -165,7 +165,7 @@ cmake --build ./debug -t clean
 To clean first and then build in a buildtree, CMake provides a convenient
 shortcut:
 
-```shell
+```sh
 cmake --build <dir> --clean-first
 
 cmake --build ./debug --clean-first
@@ -173,7 +173,7 @@ cmake --build ./debug --clean-first
 
 To debug what went wrong, use the verbose flag:
 
-```shell
+```sh
 cmake --build <dir> --verbose
 cmake --build <dir> -v
 
@@ -182,7 +182,7 @@ cmake --build ./debug -v
 
 To install a project, run:
 
-```shell
+```sh
 cmake --install <dir_of_buildtree> [<options>]
 
 cmake --install ./release
@@ -190,7 +190,7 @@ cmake --install ./release
 
 To debug an installation process, run:
 
-```shell
+```sh
 cmake --install <dir_of_buildtree> --verbose
 cmake --install <dir_of_buildtree> -v
 
@@ -233,7 +233,7 @@ Key takeaways of this directory:
 
 ## Listfiles
 
-Files that contain the CMake language are called listfiles and can be included
+Files that contain the CMake language are called _listfiles_ and can be included
 by calling `include()` and `find_package()`, or indirectly with
 `add_subdirectory()`.
 
@@ -257,7 +257,7 @@ atleast one in the root of the source tree. Such a top-level file is the first
 to be executed in the configuration stage. The file needs to have the following
 two commands as the bare minimum:
 
-```
+```cmake
 cmake_minimum_required(VERSION <x.xx>)
 project(<name> <OPTIONS>)
 ```
