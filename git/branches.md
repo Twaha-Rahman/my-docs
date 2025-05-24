@@ -19,7 +19,7 @@ Please note, `git log` by default will only show the commit history of the the
 current branch you're on. If you want to see the commit history of all the
 branches, then run: `git log --all`.
 
-To only create a branch, run: `git checkout <branch_name>`
+To only create a branch, run: `git branch <branch_name>`
 
 To create a branch and switch to it at the same time, run:
 `git checkout -b <branch_name>`
