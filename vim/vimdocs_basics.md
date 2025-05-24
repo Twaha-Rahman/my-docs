@@ -15,7 +15,7 @@ Press `<C-t>` to go back to the previous *tag* in history.
 Press `<C-o>` to go back to the previous entry in the jump list.
 
 The difference between these two is pretty simple. `<C-o>` will go back to each
-individual jumps (even if they are within the same *tag*. Whereas `C-t` will go
+individual jumps (even if they are within the same *tag*. Whereas `<C-t>` will go
 back to previous *tag* in history)
 
 
