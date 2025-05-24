@@ -8,6 +8,7 @@ lacking.
 ```
 h,j,k,l = For basic movements
 Shift + h/l = Go to the previous/next page
+Shift + j/k = Go to the previous/next tab
 
 r = Reload the current tab
 t = Open new tab
