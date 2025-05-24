@@ -191,10 +191,17 @@ A linear history can be achieved by using `git rebase`.
 `git rebase` takes the commits introduced in the current branch and replays them
 over the specified branch.
 
-For example:
-`git switch issue123; git rebase master; git switch master; git merge issue123`
-will replay the commits introduced in the `issue123` branch to the `master`
-branch and do a _fast-forward_ merge. (See `Pro Git` page 96 and 97 figures)
+For example, to replay the commits introduced in the `issue123` branch to the `master`
+branch and do a _fast-forward_ merge (See `Pro Git` page 96 and 97 figures), you'll
+need to run the following commands:
+
+```sh
+git switch issue123
+git rebase master
+
+git switch master
+git merge issue123
+```
 
 Please note, `git rebase <branch_name>` not only replays the commits introduced
 in the current branch on top of the `<branch_name>` branch, but also moves the
@@ -205,4 +212,9 @@ for figures)
 
 ## More interesting rebases
 
-TODO: type the things I've written on paper
+Let's say you have a branch that has branched off the `master` branch named `server`. Let's
+say there's another branch named `client` that later on got branched off of `server`.
+
+Now, you want to commit the patches introduced in the `client` branch to the `master` branch.
+You can use the following command to achieve that:
+`git rebase --onto master server client`

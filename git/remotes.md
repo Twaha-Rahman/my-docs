@@ -23,6 +23,36 @@ You can also use the `-v` flag to show you the URLs of those remotes.
 git remote -v
 ```
 
+If you want to see more info about a remote, then run: `git remote show <remote_name>`.
+This command will show you the HEAD branch, remote branches, local branches that are
+configured for `git pull`, and local refs that are configured for `git push`.
+
+```sh
+$ git remote show origin
+* remote origin
+  URL: https://github.com/my-org/complex-project
+  Fetch URL: https://github.com/my-org/complex-project
+  Push  URL: https://github.com/my-org/complex-project
+  HEAD branch: master
+  Remote branches:
+    master                           tracked
+    dev-branch                       tracked
+    markdown-strip                   tracked
+    issue-43                         new (next fetch will store in remotes/origin)
+    issue-45                         new (next fetch will store in remotes/origin)
+    refs/remotes/origin/issue-11     stale (use 'git remote prune' to remove)
+  Local branches configured for 'git pull':
+    dev-branch merges with remote dev-branch
+    master     merges with remote master
+  Local refs configured for 'git push':
+    dev-branch                     pushes to dev-branch                     (up to
+date)
+    markdown-strip                 pushes to markdown-strip                 (up to
+date)
+    master                         pushes to master                         (up to
+date)
+```
+
 **N.B.:** `git clone` command implicitly adds the `origin` remote for us.
 
 ## Adding remotes
@@ -32,7 +62,7 @@ To add a remote explicitly, use the following command:
 ```fish
 git remote add <shortname> <url>
 
-git remote add xyz https://github.com/Twaha-Rahman/xyz
+git remote add xyz https://github.com/Twaha-Rahman/xyz.git
 ```
 
 ## Fetching and pulling from remotes
