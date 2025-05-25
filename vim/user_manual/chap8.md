@@ -10,7 +10,7 @@ Broadly speaking, we need be aware of 3 components here:
 
 To list out all the buffers active, use `:ls`.
 
-To delete a buffer buffer, use the `:bdelete <buffer_name>` or `:bdelete <buffer_num>` or in short `:bd <buffer_name_or_num>`.
+To delete a buffer, use the `:bdelete <buffer_name>` or `:bdelete <buffer_num>` or in short `:bd <buffer_name_or_num>`.
 
 ## Tab Page Related Things (Not under this chapter)
 

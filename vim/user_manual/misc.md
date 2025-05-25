@@ -1,6 +1,6 @@
 # Vim error explanations
 
-When always puts an error ID before the error. You can use that to learn more about the error.
+Vim always puts an error ID before the error. You can use that to learn more about the error.
 For exmaple: 
 
 ```vim
