@@ -41,9 +41,11 @@ Use the `$` do move to the end of the line.
 
 # Using marks
 
-The *double backtick* command `` can be used to jump back and forth between two points.
+The *double backtick* command `` can be used to jump back and forth between two
+points.
 
-The `<C-o>` and `<C-i>` commands are used to jump back to older and newer positions respectively.
+The `<C-o>` and `<C-i>` commands are used to jump back to older and newer
+positions respectively.
 
 The `:jumps` command gives a list of positions you jumped to. The entry which
 you used last is marked with a ">".
@@ -66,7 +68,7 @@ command, which also moves you to the marked column.
 
 The `:marks` command can be used to see the list of marks.
 
-You will notice a few special marks.  These include:
+You will notice a few special marks. These include:
 
 ```vim
 '	The cursor position before doing a jump
