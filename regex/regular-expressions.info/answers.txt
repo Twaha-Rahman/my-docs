@@ -1,0 +1,15 @@
+All of the solutions below use the `global` and `multiline` flags.
+
+1) Answer for the email problem: ((?:\.?\w+)+)@((?:\w+\.?)+)
+
+2) Answer for the USA phone number problem (Using capture groups to even capture
+the whole number):
+^(?:(\d)-)?(?:(?:\((\d{3})\))|(\d{3}))(?:[- .]?)(\d{3})(?:[- .]?)(\d{4})$
+
+3) Answer to the date problem (using capture groups to catch the month, date,
+and year respectively):
+^(?<month>(?:0(?=[1-9])|(?:1(?=[0-2])))\d)\/(?<date>(?:0(?=[1-9])|(?:[12](?=[0-9]))|(?:3(?=[01])))\d)\/(?<year>\d{4})$
+
+4) Answer to the HEX color code problem:
+^\#(([a-fA-F0-9]{3})|([a-fA-F0-9]{6}))$
+
