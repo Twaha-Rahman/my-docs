@@ -35,7 +35,7 @@ add_custom_target(clean_stale_coverage_files
 
 The preceding command will search for all files with a .gcda extension and
 remove them. There is one catch though; unlike executable and library targets,
-custom targets won't be built until they are added to a dependency graph. .
+custom targets won't be built until they are added to a dependency graph.
 
 # Dependency Graph
 
@@ -185,7 +185,7 @@ set_target_properties(<target1> <target2>... PROPERTIES <prop1-name> <value1> <p
 ```
 
 Generally, it's better to use as many high-level commands as you can. CMake
-offers more of these, even narrower in their scope, usch as setting sprecific
+offers more of these, even narrower in their scope, such as setting sprecific
 properties on a target. For example:
 
 ```cmake
