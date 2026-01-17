@@ -29,7 +29,7 @@ The first character in the first column tells us what type of file it is:
 `-` -> File
 `d` -> Directory
 `l` -> Symbolic link (symlink)
-`c` -> Character file
+`c` -> Character file (Special file that gives unbuffered, direct access to hardware devices)
 
 Then, every 3 characters after that tells us the permissions
 of the user, user group, and others have over that file respectively.
