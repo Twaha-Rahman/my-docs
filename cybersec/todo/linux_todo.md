@@ -19,3 +19,5 @@
     - steghide
     - stegseek (pwd is know)
     - stegcracker (pwd unknown)
+    - netcat (nc)
+    - discover other tools....
