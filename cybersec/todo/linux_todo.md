@@ -1,5 +1,8 @@
 # Linux Todo
 
+- Learn how to SSH into a system
+    - I basically know `ssh -p <port> user@host`
+
 - Linux permissions:
     - View
     - Understand
@@ -20,4 +23,6 @@
     - stegseek (pwd is know)
     - stegcracker (pwd unknown)
     - netcat (nc)
+    - wireshark
+    - cryptography related tools
     - discover other tools....

@@ -87,6 +87,11 @@ Show line numbers where matches are found:
 grep -n "cursor" ~/.config/hypr/hyprland.conf
 ```
 
+Show only the matching part of the pattern:
+```sh
+grep -o -E "picoCTF{.+}" <file>
+```
+
 Search case-insensitively:
 ```bash
 grep -i "pOrT" ~/.config/avocado/config.json ~/.config/mango/config.json
