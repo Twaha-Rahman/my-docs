@@ -16,6 +16,10 @@
     - View
     - Kill
 
+- Learn linux FS layout and what each of the directories in `/` are for
+
+- What is a `loop` in Linux? (The thing you see when we run `lsblk`)
+
 - View processes that are using the internet
 
 - Kali Linux tools:
