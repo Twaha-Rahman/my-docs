@@ -20,7 +20,7 @@ The *main axis* property of a flexbox container can be set with the
 If `flex-direction` is set to `row` or `row-reverse`, then the **row** is the *main axis* and the **column** is the *cross axis*.
 If `flex-direction` is set to `column` or `column-reverse`, then the **column** is the *main axis* and the **row** is the *cross axis*.
 
-Warning: It's generally not a good idea to use `row-reverse` or
+**Warning:** It's generally not a good idea to use `row-reverse` or
 `column-reverse` or any properties in flexbox or CSS grid that can change the
 ordering of the elements. This is bad for accessability and keyboard based
 navigation. This is because it only changes the visual order of the elements

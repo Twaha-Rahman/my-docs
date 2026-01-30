@@ -28,7 +28,7 @@ Arabic).
 ## Grid Tracks {{{
 
 A *grid track* is the space between two *grid lines*. A *row track* is between
-two row lines and a column tack is between two column lines. When we create a
+two row lines and a column track is between two column lines. When we create a
 grid, we create these tracks by assigning a size to them.
 
 }}}

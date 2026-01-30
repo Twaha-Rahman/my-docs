@@ -69,7 +69,7 @@ h1,
 
 }}}
 
-# Pseudo-classes and Pseudo-elements
+# Pseudo-classes and Pseudo-elements {{{
 
 Pseudo-classes allows us to select HTML elements that are in a *specific state*.
 
@@ -83,7 +83,7 @@ p:nth-child(even) {
 }
 ```
 
-Pseudo-elements allows us to insert new elements using CSS.
+Pseudo-elements allows us to *insert new elements* using CSS.
 
 ```css
 .my-element::before {
@@ -112,7 +112,9 @@ We can use the `selection` pseudo-element to style the user highlighted text.
 
 **The `Pseudo-element` and `Pseudo-class` selectors will be covered in details later.**
 
-# Complex Selectors
+}}}
+
+# Complex Selectors {{{
 
 ## Descendant Combinator
 
@@ -157,6 +159,8 @@ direct children are ignored.
     background: gray;
 }
 ```
+
+}}}
 
 # Compound Selectors
 
