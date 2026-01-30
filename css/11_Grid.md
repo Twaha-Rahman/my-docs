@@ -192,7 +192,7 @@ we can use `minmax()` like so:
 ```css
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill minmax(200, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -203,7 +203,7 @@ remaining space.
 ```css
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax(100, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100, 1fr));
 }
 ```
 
