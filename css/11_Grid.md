@@ -84,7 +84,7 @@ To create a simple grid with 3 column tracks and 2 row tracks with 10px gap:
 When used in a track sizing context, `auto` can be thought of as being as big
 as as the content.
 
-**NOTE:** `auto` sized tracks will strach by default if there is additional
+**NOTE:** `auto` sized tracks will streach by default if there is additional
 space in the grid container.
 
 ## Intrinsic Sizing Keywords {{{
@@ -218,7 +218,8 @@ appear in the source. For more control, we can change the following:
 
 ## Placing items in columns {{{
 
-The default behavior of grid layout is to place items along the rows. To place the items along the columns instead, use:
+The default behavior of grid layout is to place items along the rows. To place
+the items along the columns instead, use:
 ```css
 .container {
     display: grid;
@@ -282,6 +283,8 @@ a value for `grid-column-end` or `grid-row-end`. In the 1st example, since no
 `grid-column-start` is being specified, it has the value of `auto`.
 
 In the 2nd example, this is done explicitly.
+
+Take a look at the docs for `grid-column` in MDN.
 
 }}}
 
