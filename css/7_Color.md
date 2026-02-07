@@ -21,7 +21,6 @@ ones like `tomato`, `aliceblue`, `hotpink`, and `goldenrod`.
 
 }}}
 
-
 ## Numeric Colors {{{
 
 Numeric colors can also be divided into 3 catagories:
